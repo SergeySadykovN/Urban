@@ -11,4 +11,4 @@ elif name_1.isalpha():
 else:
     print('error')
 
-
+    #проверка

@@ -69,7 +69,14 @@
 # (1, 2, 5, 7)
 
 
-tuple_1 = ('red', 'green', 'yellow',)
-user_input = input('input colour ')
+my_box = {}
+my_box[1] = 'red'
+my_box[2] = 'green'
+my_box[3] = 'yellow'
+print(my_box)
 
-for 
+my_list = (1,2,3,3,4,4,4)
+my_set = set(my_list)
+print(my_set)
+my_tuple = tuple(my_set)
+print(my_tuple)

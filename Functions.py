@@ -58,14 +58,16 @@
 # функция ищет в списке фамилию, если есть - останавливаем поиск,
 # если нет - предлагаем добавить фамилию в список и продлжаем поиск
 def name_data(name_value):
-    name_list = ['<NAME>', '<NAME>', '<NAME>', 'Serg']
+    name_list = ['<NAME>', '<NAME>', '<NAME>', 'serg']
     name_found = False
 
     while name_value != name_found:
 
         if name_value in name_list:
             name_found = True
-            print(f'The name is {name_value} is in list!')
+            # сделать строчными буквы чтоб искал независимо от ввода Прописных или строчных КАК??
+            name_value = name_value.lower()
+            print(f'The name is {name_value.lower()} is in the list!')
             break
         else:
             name_list.append(name_value)

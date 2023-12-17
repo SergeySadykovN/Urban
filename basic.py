@@ -80,7 +80,6 @@
 # Напишите программу на Python для печати календаря с указанным месяцем и годом.
 import calendar
 
-
 # actualy_date = datetime.datetime.now()
 # y =int(input('Input year: '))
 # m =int(input('Input month: '))
@@ -142,8 +141,6 @@ import calendar
 #
 
 
-
-
 # 18. Напишите программу на языке Python для расчета суммы трех заданных чисел,
 # если значения равны, тогда верните трижды их сумму.
 
@@ -161,7 +158,7 @@ import calendar
 # 19. Напишите программу на Python, чтобы получить новую строку из заданной строки,
 # где «Is» было добавлено вперед.
 # Если заданная строка уже начинается с «Is», вернуть строку без изменений.
-
+#
 # str_1 = 'The best! '
 # str_2 = 'Is '
 #
@@ -170,14 +167,52 @@ import calendar
 # else:
 #     str_1 = str_2 + str_1
 #     print(str_1)
-
-
+#
+#
 # def new_str(str):
 #     if len(str) >= 2 and str[0:2] == "Is":
 #         return str
-#     return 'Is' + str
+#     return 'Is ' + str
 #
 #
 # print(new_str('The Best '))
 # print(new_str('Is Empty'))
+# print(new_str('It dog'))
 
+# 21. Напишите программу на Python, чтобы выяснить, является ли данное число
+# (принять от пользователя)
+# четным или нечетным, распечатайте соответствующее сообщение для пользователя.
+
+# user_input = int(input("Input value: "))
+# ost = 1
+# if user_input % 2 != ost:
+#     print(f'{user_input} -> This is an even number')
+# else:
+#     print(f'{user_input} -> This is an odd number')
+
+# 22. Напишите программу на Python для подсчета числа 4
+# (сколько раз встречается в списке в заданном списке
+
+# def count_value(value=None):
+#     my_list = [1, 2, 3, 4, 5, 6, 4, 8, 4, 10]
+#     count = 0
+#     value = int(input('Enter a number: '))
+#
+#     for i in my_list:
+#         if i == value:
+#             count += 1
+#
+#     print(count)
+#
+#
+# count_value()
+
+#  23. Напишите программу на Python, чтобы получить n (неотрицательные целые)
+#  копии первых 2 символов данной строки.
+#  Вернуть n копий всей строки, если длина меньше 2
+
+simple_string = 'Hello World'
+print(len(simple_string))
+while len(simple_string) <= 12:
+    for char in simple_string:
+        print(char)

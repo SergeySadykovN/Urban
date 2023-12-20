@@ -79,6 +79,8 @@
 
 # Напишите программу на Python для печати календаря с указанным месяцем и годом.
 import calendar
+from idlelib.iomenu import encoding
+
 
 # actualy_date = datetime.datetime.now()
 # y =int(input('Input year: '))
@@ -207,12 +209,74 @@ import calendar
 #
 # count_value()
 
-#  23. Напишите программу на Python, чтобы получить n (неотрицательные целые)
-#  копии первых 2 символов данной строки.
-#  Вернуть n копий всей строки, если длина меньше 2
+# #  23. Напишите программу на Python, чтобы получить n (неотрицательные целые)
+# #  копии первых 2 символов данной строки.
+# #  Вернуть n копий всей строки, если длина меньше 2
+#
+# simple_string = 'Hello World'
+# print(len(simple_string))
+# while len(simple_string) <= 12:
+#     for char in simple_string:
+#         print(char)
 
-simple_string = 'Hello World'
-print(len(simple_string))
-while len(simple_string) <= 12:
-    for char in simple_string:
-        print(char)
+# day_tuple = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday')
+# profit_tuple = (100, 50, 20, 10, 5, 25, 105,100,50)
+# result = zip(day_tuple, profit_tuple)
+# print(tuple(result))
+#
+# таблица умножения
+# for i in range(1, 10):
+#     for j in range(1, 10):
+#         print(f'{i * j:4d}', end=' ')
+#     print()
+
+
+# range_1 = range(1,10)
+# for i in range_1:
+#     for j in range_1:
+#         print(f'{i*j:3}', end=' ')
+#     print()
+
+# open_file = open(r'C:\Users\Programmer\Documents\GitHub\Urban\03_code_style 4.py', encoding='UTF8')
+# for line in open_file:
+#     print(line)
+# open_file.close()
+
+# 27. Напишите программу на Python, чтобы объединить все элементы списка в строку и вернуть ее.
+
+# my_list = ['Sergeant', 'Francisco', 'Jeremy']
+# my_string = ' '.join(my_list)
+# print(my_string)
+
+# def concatenate_lists(list1):
+#     list1 = ' '.join(list1)
+#     print(list1)
+#
+#
+# concatenate_lists(['Sergey', 'Bob', 'Alice'])
+
+# Напишите программу на Python, чтобы распечатать набор,
+# содержащий все цвета из color_list_1, которых нет в color_list_2
+# ожидаемый вывод White Black
+
+# color_list_1 = set(["White", "Black", "Red"])
+# color_list_2 = set(["Red", "Green"])
+# # с помощью встроенной ф-ции set().difference()
+# color_list_difference = set(color_list_1).difference(color_list_2)
+# for color in color_list_difference:
+#     print(color)
+# # обычным вычитанием
+# difference_value = color_list_1 - color_list_2
+# for color in difference_value:
+#     print(color)
+
+# Напишите программу на Python, которая примет основание и высоту треугольника и вычислит площадь
+# S = (1/2)ah
+# где a - основание треугольника, h - высота, опущенная на это основание.
+
+def triangle_square(a=int, h=int):
+    square = (a * h)/2
+    print(square)
+
+
+triangle_square(1,6)

@@ -81,7 +81,6 @@
 import calendar
 from idlelib.iomenu import encoding
 
-
 # actualy_date = datetime.datetime.now()
 # y =int(input('Input year: '))
 # m =int(input('Input month: '))
@@ -274,9 +273,71 @@ from idlelib.iomenu import encoding
 # S = (1/2)ah
 # где a - основание треугольника, h - высота, опущенная на это основание.
 
-def triangle_square(a=int, h=int):
-    square = (a * h)/2
-    print(square)
+# def triangle_square(a=int, h=int):
+#     square = (a * h)/2
+#     print(square)
+#
+# triangle_square(1,6)
+#
+
+# # функция поиска по списку
+# def search_fruit(fruit_value):
+#     fruit_list = ['apple', 'banana', 'lemon', 'orange', 'pear']
+#     find_fruit = False
+#
+#     while fruit_value != find_fruit:
+#
+#         if fruit_value in fruit_list:
+#             find_fruit = True
+#             print(f'The {fruit_value} is in list')
+#             break
+#         else:
+#             fruit_value = input('Please enter a valid fruit: ')
+#
+#
+# search_fruit(input('Please enter a fruit: '))
 
 
-triangle_square(1,6)
+# enumerate
+# def function_with_enumerate():
+#     fruit_list = ["fruit", "banana", "car", "audi"]
+#     for index, item in enumerate(fruit_list):
+#         print(f'Item {index}: {item}')
+#     dict = {}
+#     for i in range(len(fruit_list)):
+#         dict[i] = fruit_list[i]
+#     print(dict)
+#
+#
+# function_with_enumerate()
+
+# list_day = ['1', 'Monday', '2', 'Tuesday', '3', 'Wednesday', '4',
+#             'Thursday', '5', 'Friday', '6', 'Saturday', '7', 'Sunday']
+#
+# dict_day = {}
+#
+# for item in list_day:
+#     if item.isdigit():
+#         index = int(item)
+#     else:
+#         dict_day[index] = item
+#
+# print(dict_day)
+# for index, item in enumerate(dict_day):
+#     print(item, ':', dict_day[item])
+
+
+list_day = ['1', 'Monday', '2', 'Tuesday', '3', 'Wednesday', '4',
+            'Thursday', '5', 'Friday', '6', 'Saturday', '7', 'Sunday']
+list2 = [999,888,876]
+
+
+def print_value_of_list(a,b=None,c=None,d=None):
+    print(a,b,c,d)
+    # for item in list:
+    #     print(item)
+
+
+# print_value_of_list(list_day)
+print_value_of_list(list_day)
+print_value_of_list(*list_day)

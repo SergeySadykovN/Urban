@@ -1,7 +1,7 @@
 import simple_draw as sd
 from math import cos, sin, pi
 from time import sleep
-import time
+# sd.resolution(1080, 1080)
 
 # angle = 0
 # length = 100
@@ -17,11 +17,11 @@ import time
 #     y += length*sin(angle/180*pi)
 #     angle += 110
 #     sleep(0.1)
-# #
-# lenght = 200
-# point = sd.get_point(300, 300)
+#
+lenght = 200
+point = sd.get_point(300, 300)
 
-
+#
 # v1 = sd.get_vector(start_point=point, angle=0, length=200, width=3)
 # v1.draw()
 # v2 = sd.get_vector(start_point=v1.end_point, angle=120, length=200, width=3)
@@ -29,19 +29,19 @@ import time
 # v3 = sd.get_vector(start_point=v2.end_point, angle=240, length=200, width=3)
 # v3.draw()
 
-# def triangle(point, angle=0):
-#     v1 = sd.get_vector(start_point=point, angle=0, length=200, width=3)
-#     v1.draw(color=(167, 15, 12))
-#     v2 = sd.get_vector(start_point=v1.end_point, angle=angle + 120, length=200, width=3)
-#     v2.draw(color=(167, 15, 12))
-#     v3 = sd.get_vector(start_point=v2.end_point, angle=angle + 240, length=200, width=3)
-#     v3.draw(color=(167, 15, 12))
-#
-#
-# point_0 = sd.get_point(100, 300)
-# for angle in range(0, 361, 10):
-#     triangle(point=point_0, angle=angle)
-#     time.sleep(0.1)
+def triangle(point, angle=0):
+    v1 = sd.get_vector(start_point=point, angle=0, length=200, width=3)
+    v1.draw(color=(167, 15, 12))
+    v2 = sd.get_vector(start_point=v1.end_point, angle=angle + 120, length=200, width=3)
+    v2.draw(color=(167, 15, 12))
+    v3 = sd.get_vector(start_point=v2.end_point, angle=angle + 240, length=200, width=3)
+    v3.draw(color=(167, 15, 12))
+
+
+point_0 = sd.get_point(100, 300)
+for angle in range(0, 361, 10):
+    triangle(point=point_0, angle=angle)
+    time.sleep(0.1)
 
 # def branch(point, angle, length):
 #     point2 = sd.get_point(300, 5)

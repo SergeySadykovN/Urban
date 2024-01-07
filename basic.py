@@ -79,7 +79,11 @@
 
 # Напишите программу на Python для печати календаря с указанным месяцем и годом.
 import calendar
+import math
+import numbers
+import string
 from idlelib.iomenu import encoding
+
 
 # actualy_date = datetime.datetime.now()
 # y =int(input('Input year: '))
@@ -326,18 +330,142 @@ from idlelib.iomenu import encoding
 # for index, item in enumerate(dict_day):
 #     print(item, ':', dict_day[item])
 
-
-list_day = ['1', 'Monday', '2', 'Tuesday', '3', 'Wednesday', '4',
-            'Thursday', '5', 'Friday', '6', 'Saturday', '7', 'Sunday']
-list2 = [999,888,876]
-
-
-def print_value_of_list(a,b=None,c=None,d=None):
-    print(a,b,c,d)
-    # for item in list:
-    #     print(item)
-
-
+#
+# list_day = ['1', 'Monday', '2', 'Tuesday', '3', 'Wednesday', '4',
+#             'Thursday', '5', 'Friday', '6', 'Saturday', '7', 'Sunday']
+# list2 = [999,888,876]
+#
+#
+# def print_value_of_list(a,b=None,c=None,d=None):
+#     print(a,b,c,d)
+#     # for item in list:
+#     #     print(item)
+#
+#
+# # print_value_of_list(list_day)
 # print_value_of_list(list_day)
-print_value_of_list(list_day)
-print_value_of_list(*list_day)
+# print_value_of_list(*list_day)
+
+
+# from turtle import *
+#
+# t = Turtle()
+# t.speed(10)
+# bgcolor('black')
+#
+# len = 10
+#
+# for i in range(200):
+#     t.pencolor('green')
+#     t.forward(len)
+#     t.right(400)
+#     t.left(200)
+#     len = len - 10
+#
+# t.hideturtle()
+# done()
+#
+
+# # Print only even numbers from list
+#
+# list_numbers = [
+#     386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
+#     399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
+#     815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,
+#     958,743, 527
+#     ]
+# even_number_list = []
+#
+#
+# for number in list_numbers:
+#     if number == 462:
+#         break
+#     if number %2 != 1:
+#         even_number_list.append(number)
+#
+# print(f'The even number list {even_number_list}')
+
+
+# 31. Напишите программу на Python для вычисления
+# наибольшего общего делителя (GCD) из двух натуральных чисел
+#
+# num_1 = 345*2
+# num_2 = 345
+#
+# while num_2:
+#     num_1,  num_2 = num_2, num_1 % num_2
+# print(num_1)
+
+# fibonacci recursion
+# list_fibonacci = []
+
+
+#
+# def fib_recursive(n):
+#     # if n in (0,1):
+#     #     return n
+#     if n == 1:
+#         return 1
+#     if n == 0:
+#         return 0
+#     return fib_recursive(n - 1) + fib_recursive(n - 2)
+#
+#
+# print(fib_recursive(2))
+#
+# for n in range(10):
+#     print(fib_recursive(n))
+
+# def fib(n):
+#     if n in (0, 1):
+#         return n
+#     return fib(n - 1) + fib(n - 2)
+#
+# # print(fib(5))
+#
+# for i in range(10):
+#     print(fib(i))
+
+# def high_and_low(numbers):
+#     num = list(map(int, numbers.split()))
+#     print(num)
+#     high = max(num)
+#     low = min(num)
+#     return high, low
+#     print(high, low)
+#
+#
+# high_and_low('1 2 3 4 5 6')
+
+# string = "is2 Thi1s T4est 3a"
+# # print(string.split())
+# words = string.split()
+# print(string.split())
+# print(string.strip())
+# result = []
+
+# def array_diff(a, b):
+#     result = []
+#     for i in a:
+#         if i not in b:
+#             result.append(i)
+#     print(result)
+#
+#
+# array_diff([1,2,2,3,4,5], [2])
+
+# "4556364607935616" --> "############5616"
+#
+def maskify(cc):
+    # if len(cc) <= 4:
+    #     return cc
+    # else:
+    #     last_4 = cc[-4::]
+    #     temp = cc[:-4]
+    #     maskify = '#' * len(temp) + last_4
+    #
+    #     print(maskify)
+    print ('#' * (len(cc)-4) + cc[-4::])
+
+
+maskify("iughsdjftlausgh616")

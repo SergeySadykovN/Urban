@@ -58,7 +58,7 @@
 # функция ищет в списке фамилию, если есть - останавливаем поиск,
 # если нет - предлагаем добавить фамилию в список и продлжаем поиск
 def name_data(name_value):
-    name_list = ['<NAME>', '<NAME>', '<NAME>', 'serg']
+    name_list = ['<Elena>', '<Anton>', '<Igor>', 'Serg']
     name_found = False
 
     while name_value != name_found:
@@ -77,4 +77,4 @@ def name_data(name_value):
 
 
 
-name_data(name_value=input('Input your name: '))
+# name_data(name_value=input('Input your name: '))

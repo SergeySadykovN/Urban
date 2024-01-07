@@ -62,14 +62,16 @@
 #     if s[0] != s[-1]:
 #         return False
 #     return palindrom(s[1: -1])
-# # print(palindrom('1221'))
+
+
+# print(palindrom('21'))
 #
 # # с помощью спец синтаксиса
 # def palindrom_simple (s):
 #     return s == s[::-1]
 #     return s == s[len(s)-1::-1]
 #
-# print(palindrom_simple('sr'))
+# print(palindrom_simple('srs'))
 
 # # лист палиндром ?
 #
@@ -79,11 +81,35 @@
 #
 # print(is_palindrome([1, 2, 3, 4, 5, 4, 3, 2, 1, ]))
 
-# c помощью рекурсии принять строку (asdfghjkl)  отдать a(s(d(f(g)h)j)k)l)
-def rec_f(s):
-    if len(s) == 1 or len(s) == 2:
-        return s
-    return s[0] + '(' + rec_f(s[1:-1]) + ')' + s[-1]
+# # c помощью рекурсии принять строку (asdfghjkl)  отдать a(s(d(f(g)h)j)k)l)
+# def rec_f(s):
+#     if len(s) == 1 or len(s) == 2:
+#         return s
+#     return s[0] + '(' + rec_f(s[1:-1]) + ')' + s[-1]
+#
+#
+# print(rec_f('asdfgaskjdfgajsgdfjags'))
 
+#
+# def palindrome(string):
+#     if len(string) <= 1:
+#         return True
+#     if string[0] != string[-1]:
+#         return False
+#     return palindrome(string[1:-1])
+#
+# print(palindrome('dffd'))
 
-print(rec_f('asdfgaskjdfgajsgdfjags'))
+# palindrom int
+
+# def is_palindrome(x):
+#     str_x = str(x)
+#     reversed_str_x = str_x[::-1]
+#     return x == int(reversed_str_x)
+#
+# x = int(input())
+#
+# if is_palindrome(x):
+#     print("true")
+# else:
+#     print("false")

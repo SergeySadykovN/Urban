@@ -6,7 +6,9 @@ from tkinter import ttk
 def download_link(link):
     """download func"""
     yt = YouTube(link, use_oauth=True)
-    stream = yt.streams.get_by_itag(251)
+    # ищем аудио по тегу itag
+    # print(yt.streams)
+    stream = yt.streams.get_by_itag(251)  # 251 tag direct to audio content
     return stream.download(output_path='D:\Downloads')
 
 
@@ -15,7 +17,7 @@ def window_api():
 
     def get_link():
         link = entry.get()
-        entry.delete(0,END)
+        entry.delete(0, END)
         return download_link(link)
 
     root = Tk()

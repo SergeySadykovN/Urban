@@ -1,4 +1,8 @@
 class Building:
+    '''Создайте новый класс Buiding
+    Создайте инициализатор для класса Buiding, который будет задавать
+    целочисленный атрибут этажности self.numberOfFloors и строковый атрибут self.buildingType
+    Создайте(перегрузите) __eq__, используйте атрибут numberOfFloors и buildingType для сравнения'''
     def __init__(self, numberOfFloors, buildingType):
         self.numberOfFloors = int(numberOfFloors)
         self.buildingType = str(buildingType)

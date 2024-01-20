@@ -3,6 +3,7 @@ class Calculator:
     sign = str(input("Enter the sigh: "))
     second_value = int(input("Enter second: "))
     result = None
+    print_ex = '{} + {} + {} = {}'.format(first_value, sign, second_value, result)
 
     def __init__(self, first_value, sign, second_value):
         self.first_value = first_value
@@ -22,5 +23,17 @@ class Calculator:
         # if self.first_value.isnumeric():
         pass
 
+    def get(self, first_value, sign, second_value):
+        """для печати"""
+        self.result = 0
+        first_value = int(first_value)
+        sign = str(sign)
+        second_value = int(second_value)
+        print_ex = '{}  {}  {} = {}'.format(first_value, sign, second_value, self.result)
+        print(print_ex)
+
+
+
 
 test = Calculator(1, 1, 1)
+test.get(1,"*",3)

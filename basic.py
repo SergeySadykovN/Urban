@@ -456,16 +456,63 @@ from idlelib.iomenu import encoding
 
 # "4556364607935616" --> "############5616"
 #
-def maskify(cc):
-    # if len(cc) <= 4:
-    #     return cc
-    # else:
-    #     last_4 = cc[-4::]
-    #     temp = cc[:-4]
-    #     maskify = '#' * len(temp) + last_4
+# def maskify(cc):
+#     # if len(cc) <= 4:
+#     #     return cc
+#     # else:
+#     #     last_4 = cc[-4::]
+#     #     temp = cc[:-4]
+#     #     maskify = '#' * len(temp) + last_4
+#     #
+#     #     print(maskify)
+#     print ('#' * (len(cc)-4) + cc[-4::])
+#
+#
+# maskify("iughsdjftlausgh616")
+
+# def arrayHide(string):
+#     if len(string) <= 4:
+#         return string
+#     else:
+#         last_4 = string[-4:]
+#         temp = string[:-4]
+#         mask = "#" * len(temp) + last_4
+#         print(mask)
+#     pass
+#
+#
+# arrayHide('123456789')
+
+
+# сравнить два  номера телефона, по префиксу
+
+# def phoneNumber(phoneNumber1, phoneNumber2):
+#     if len(phoneNumber1) <= 9 or len(phoneNumber2) <= 9:
+#         print('Invalid phone number')
+#     else:
+#         prf1 = phoneNumber1[:3]
+#         prf2 = phoneNumber2[:3]
+#         if prf1 == prf2:
+#             print('the same prefix')
+#         else:
+#             print('different prefix')
+#
+# phoneNumber('9317061612', '9317061611')
+
+def sorter(texbooks):
+    # format_book = []
+    # for book in texbooks:
+    #     book = book.lower()
+    #     format_book.append(book)
     #
-    #     print(maskify)
-    print ('#' * (len(cc)-4) + cc[-4::])
+    # sorted_book = sorted(format_book)
+    # print(sorted_book)
+
+    print(sorted(texbooks, key=str.casefold))
 
 
-maskify("iughsdjftlausgh616")
+pass
+
+sorter(['Abc', 'Klm', 'bcd', 'pqr', 'jkl', 'mno', ])
+
+наследование

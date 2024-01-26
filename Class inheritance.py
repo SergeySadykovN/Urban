@@ -11,7 +11,7 @@ class Car:
         return 100
 
     def __str__(self):
-        return 'Car {}, Price: {}, Horse power: {}'.format(self.name, self.price, self.horse_powers())
+        return 'Car {}, Price: {} rub, Horse power: {}'.format(self.name, self.price, self.horse_powers())
 
 
 class Nissan(Car):

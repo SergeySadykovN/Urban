@@ -107,29 +107,28 @@
 # house.setNumberOfFloor(5)
 
 
-# class Building:
-#     def __init__(self, numberOfFloors, buildingType):
-#         self.numberOfFloors = int(numberOfFloors)
-#         self.buildingType = str(buildingType)
-#
-#     def __eq__(self, other):
-#         return self.numberOfFloors != other
-#
-#
-# firstBuilding = Building(10, 'simple building')
-# secondBuilding = Building(100, 'skyscraper')
-# thirdBuilding = Building(10, 'simple building')
-# fourthBuilding = Building(10, 'not simple building')
-#
-# if Building.__eq__(firstBuilding, thirdBuilding):
-#     print('identical')
+class Building:
+    def __init__(self, numberOfFloors, buildingType):
+        self.numberOfFloors = int(numberOfFloors)
+        self.buildingType = str(buildingType)
+
+    def __eq__(self, other):
+        return (self.numberOfFloors == other.numberOfFloors
+                and self.buildingType == other.buildingType)
+
+
+firstBuilding = Building(10, 'simple building')
+secondBuilding = Building(10, 'simple building')
+
+if Building.__eq__(firstBuilding, secondBuilding):
+    print('identical')
+else:
+    print('not identical!')
+
+# if firstBuilding == secondBuilding:
+#     print('equal')
 # else:
-#     print('not identical!')
-#
-# # if firstBuilding == thirdBuilding:
-# #     print('equal')
-# # else:
-# #     print('not equal!')
+#     print('not equal!')
 
 
 # class Building:

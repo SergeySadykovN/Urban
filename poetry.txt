@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 My soul is dark - Oh! quickly string
 The harp I yet can brook to hear;
 And let thy gentle fingers fling
@@ -16,9 +15,3 @@ For it hath been by sorrow nursed,
 And ached in sleepless silence, long;
 And now 'tis doomed to know the worst,
 And break at once - or yield to song.
-
-Пример русского текста
-Peace for everyone! 
-Peace for everyone! 
-Peace for everyone! 
-No  war!

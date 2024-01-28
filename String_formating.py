@@ -10,7 +10,7 @@ score2 = 42
 total_score = score1 + score2
 team1_time = 18015.2
 team2_time = 17021.3
-time_avr_per_task = (team1_time + team2_time) / total_score
+time_avr_per_task = int((team1_time + team2_time) / total_score)
 
 print("The first team collect {} points, the second team collect {} points".format(score1, score2))
 print('The first team collect {} points, in {}  sec.'.format(score1, team1_time))
@@ -32,13 +32,13 @@ print(f'\nTournaments Results: \n'
 
 # форматирование вывода ширины полей
 teams_dict = {'The winner is ': result,
-              'number of participate first team:': team1_num,
-              'number of participate second team:': team2_num,
-              'points first team:': score1,
-              'points second team:': score2,
-              'total points: ': total_score,
+              'number of participate first team': team1_num,
+              'number of participate second team': team2_num,
+              'points first team': score1,
+              'points second team': score2,
+              'total points ': total_score,
               'average time per task': time_avr_per_task}
 
 for key, value in teams_dict.items():
-    print(f'{key:34}: {value}')
+    print('|{txt:^38}: {value:>12}|'.format(txt=key, value=value))
 

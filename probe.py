@@ -1,82 +1,47 @@
-# вписать имя и фамилию , определить  мужчина или женщина
-# name_1 = input('input name and fullname ')
+# # def find_name(list_name):
+# #     user_input = input('Enter name: ')
+# #     for name in list_name:
+# #         if name == user_input:
+# #             print(f' is in list!')
+# #             break
+# #         else:
+# #             print(input('Try another: '))
+#
+#
+# def find_name(name_list, name):
+#     for name in list_name:
+#         if name == name:
+#             return ('Ok!')
+#     return 'Name not found'
+#
+#
+# list_name = ['Serg', 'Anna', 'Igor', 'Lena']
+# name = input('Enter your name: ')
+# result = find_name(*list_name, name)
+# print(result)
+#
+# # find_name(list_name)
+import os
+import time
 
-# print (name_1)
+# path = '/Users/9110226522g/Desktop'
+# for dirs, files, filenames in os.walk(path):
+#     for file in filenames:
+#         filepath = os.path.join(dirs, file)
+#         filetime = os.path.getatime(file)
+#         time = time.strftime('%d-%m-%Y %H:%M', time.localtime(filetime))
+#         filesize = os.path.getsize(file)
+#
+#         print(f'File: {file}, path: {filepath}, size: {filesize}, time: {time}')
+path = r'/Users/9110226522g/Desktop'
+filename = '/Users/9110226522g/Desktop/Снимок экрана 2023-12-17 в 18.27.12.png'
+for file in os.listdir(path):
+    file_path = os.path.join(path, filename)
+    file_time = os.path.getatime(filename)
+    time_normal = time.strftime('%d-%m-%Y %H:%M', time.localtime(file_time))
 
-# if name_1.isnumeric():
-#   print ('is not name')
-# elif name_1.isalpha():
-#   print('Thanks')
-# else:
-#   print('error')
+    file_parent = os.path.dirname(filename)
+    print(filename,time_normal)
 
-# name_1 = input('input name and fullname ')
-
-# print (name_1)
-
-# if name_1.isnumeric():
-#  print ('is not name')
-# elif name_1.isalpha():
-#   print('Thanks')
-# else:
-#   print('error')
-
-
-# 1-4
-# current_car = 'My car is BMW'
-# print(current_car.find('BMW'))
-# print(current_car.replace('BMW', 'AUDI'))
-# print(current_car.isalpha())
-##false полагаю из-за пробелов, если пробелов нет то true
-# print(current_car.isnumeric())
-# false естественно
-
-# 5
-# current_list = ['A', 'B']
-# добавляет в конец списка
-# current_list.append('C')
-# current_list.append('D')
-# print(current_list)
-# ['A', 'B', 'C', 'D']
-
-# добавляем в нужное место списка через индекс
-# current_list.insert(0,'X')
-# print(current_list)
-# ['X', 'A', 'B', 'C', 'D']
-
-# добавляем (расширяем список)
-# current_list.extend(['Z','Y'])
-# print(current_list)
-# ['X', 'A', 'B', 'C', 'D', 'Z', 'Y']
-
-# 6
-# current_list.append(5)
-# print(current_list)
-# ['X', 'A', 'B', 'C', 'D', 'Z', 'Y', 5]
-# print (type(current_list[-1]))
-# <class 'int'>
-# в строковый список юобавилось число как int
-
-# 7
-# my_tuple = (1,2,5)
-
-# 8
-# my_tuple.append(8)
-# кортеж не имеет функции append)
-
-# 9
-# print(my_tuple + (7,)) #Добавляя один элемент в кортеж через +, ставим в конце запятую иначе error
-# (1, 2, 5, 7)
-
-
-my_box = {}
-my_box[1] = 'red'
-my_box[2] = 'green'
-my_box[3] = 'yellow'
-print(my_box)
-
-my_list = (1,2,3,3,4,4,4)
-my_set = set(my_list)
-print(my_set)
-my_tuple = tuple(my_set)
-print(my_tuple)
+# print('%'*40)]
+# print(filename)

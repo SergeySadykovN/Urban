@@ -43,5 +43,5 @@ for file in os.listdir(path):
     file_parent = os.path.dirname(filename)
     print(filename,time_normal)
 
-# print('%'*40)]
-# print(filename)
+print('%'*40)]
+print(filename)

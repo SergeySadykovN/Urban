@@ -47,11 +47,13 @@ def access_list_element(lst, index):
     try:
         return lst[index]
     except IndexError:
-        return "IndexError:"
+        return f"IndexError: {IndexError}"
     except TypeError:
-        return 'TypeError:'
+        return f'TypeError: {TypeError}'
 
 
 print(access_list_element([1, 2, 3], 0))  # printed 1 (first element in list, for index 1 )
 print(access_list_element([1, 2, 3], 4))  # IndexError (index 4 is not exist)
 print(access_list_element(3, 3))  # TypeError (must be list and index)
+
+

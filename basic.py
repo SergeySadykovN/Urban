@@ -84,6 +84,8 @@ import numbers
 import string
 from idlelib.iomenu import encoding
 
+import exceptions_try
+
 
 # actualy_date = datetime.datetime.now()
 # y =int(input('Input year: '))
@@ -499,20 +501,5 @@ from idlelib.iomenu import encoding
 #
 # phoneNumber('9317061612', '9317061611')
 
-def sorter(texbooks):
-    # format_book = []
-    # for book in texbooks:
-    #     book = book.lower()
-    #     format_book.append(book)
-    #
-    # sorted_book = sorted(format_book)
-    # print(sorted_book)
-
-    print(sorted(texbooks, key=str.casefold))
 
 
-pass
-
-sorter(['Abc', 'Klm', 'bcd', 'pqr', 'jkl', 'mno', ])
-
-наследование

@@ -84,7 +84,7 @@ class Rectangle:
         return self.a * self.b
 
     def __str__(self):
-        return f'rectangular area {self.a} X {self.b} = {self.a * self.b}'
+        return f'rectangular area {self.a} X {self.b} = {self.__call__()}'
 
 
 # v.1

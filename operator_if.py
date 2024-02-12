@@ -47,6 +47,7 @@ def summ(a, b, c):
 
 
 # здесь вводим числа для проверки и сложения
+
 print('If values are equals: ' + str(summ(2, 2, 2)))
 print('If values are different: ' + str(summ(1, 2, 3)))
 

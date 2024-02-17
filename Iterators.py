@@ -23,7 +23,7 @@ class EvenNumbers:
             raise StopIteration
 
 
-# чтобы четные значения вывести списком
+# чтобы четные значения вывести списком:
 even_list = []
 for i in EvenNumbers(1, 10):
     even_list.append(i)

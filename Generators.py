@@ -9,18 +9,38 @@ def all_subsequence(string):
 
 for substr in all_subsequence('abcd'):
     print(substr)
+# a
+# ab
+# abc
+# abcd
+# b
+# bc
+# bcd
+# c
+# cd
+# d
 
 
 def generator_fibonacci():
     '''генератор чисел фибоначи'''
     a, b = 0, 1
-    while a < 100:
+    while a < 50:
         yield a
         a, b = b, a + b
 
 
 for fib_num in generator_fibonacci():
     print(fib_num)
+# 0
+# 1
+# 1
+# 2
+# 3
+# 5
+# 8
+# 13
+# 21
+# 34
 
 
 def generator_name(name_list):
@@ -36,3 +56,6 @@ name_next = generator_name(['Serg', 'Anna', 'Anton'])
 
 for name in name_next:
     print(name)
+# Serg
+# Anna
+# Anton

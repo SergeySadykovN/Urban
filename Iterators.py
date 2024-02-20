@@ -9,13 +9,18 @@ class EvenNumbers:
     def __init__(self, start=0, end=1):
         self.start = start
         self.end = end
+        self.value = start
 
     def __iter__(self):
+        self.value = 0
         return self
 
     def __next__(self):
         if self.start <= self.end:
-            numbers = self.start if self.start % 2 == 0 else self.start + 1
+            if self.start % 2 == 0:
+                numbers = self.start
+            else:
+                numbers = self.start + 1
             self.start += 2
             return numbers
 
@@ -23,19 +28,11 @@ class EvenNumbers:
             raise StopIteration
 
 
-# чтобы четные значения вывести списком
-# (так весь объем данных четных чисел будет хранится в памяти и "оптом" выводится):
-even_list = []
-for i in EvenNumbers(1, 10):
-    even_list.append(i)
-print(even_list)
-# [2, 4, 6, 8, 10]
-
-
-# просто вывести построчно
-# (а так в памяти хранится разово только один итератор):
-for i in EvenNumbers(1, 6):
+for i in EvenNumbers(1, 5):
     print(i)
-# 2
-# 4
-# 6
+for i in EvenNumbers(1, 3):
+    print(i)
+
+# value_iter = EvenNumbers(1,9)
+# print(next(value_iter))
+# print(next(value_iter))

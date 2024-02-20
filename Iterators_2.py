@@ -5,6 +5,7 @@ class Evennumbers:
         self.value = start
 
     def __iter__(self):
+        '''выисляем четные числа'''
         if self.start % 2 == 1:
             self.value = self.start - 1
         else:
@@ -12,6 +13,7 @@ class Evennumbers:
         return self
 
     def __next__(self):
+        '''пошагово +=2 '''
         if self.value > self.end:
             raise StopIteration
         else:

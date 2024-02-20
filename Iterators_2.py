@@ -5,7 +5,7 @@ class Evennumbers:
         self.value = start
 
     def __iter__(self):
-        '''âûèñëÿåì ÷åòíûå ÷èñëà'''
+        '''Ð²Ñ‹Ð¸ÑÐ»ÑÐµÐ¼ Ñ‡ÐµÑ‚Ð½Ñ‹Ðµ Ñ‡Ð¸ÑÐ»Ð°'''
         if self.start % 2 == 1:
             self.value = self.start - 1
         else:
@@ -13,7 +13,7 @@ class Evennumbers:
         return self
 
     def __next__(self):
-        '''ïîøàãîâî +=2 '''
+        '''Ð¿Ð¾ÑˆÐ°Ð³Ð¾Ð²Ð¾ +=2 '''
         if self.value > self.end:
             raise StopIteration
         else:

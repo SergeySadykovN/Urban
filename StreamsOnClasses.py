@@ -40,9 +40,16 @@ class Knight(Thread):
         print(f'{self.name} победил спустя {day_count} дней !')
 
 
-knight1 = Knight('Knight_1', 25)
-knight2 = Knight('Knight_2', 20)
+knight1 = Knight('Knight_1', 30)
+knight2 = Knight('Knight_2', 50)
+
+print('Start Fight!')
 knight1.start()
 knight2.start()
+
 knight1.join()
 knight2.join()
+
+print('Finish '+ '*' * 20)
+
+

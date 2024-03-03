@@ -9,6 +9,7 @@
 
 from time import sleep
 from threading import Thread
+import threading
 import queue
 
 
@@ -71,7 +72,7 @@ class Customer(Thread):
         self.table.is_busy = False
         if self.cafe.queue.qsize() > 0:
             self.cafe.serve_customer(self.cafe.queue.get())
-        # self.table.is_busy = True
+
 
 
 tables = [Table(i) for i in range(1, 4)]

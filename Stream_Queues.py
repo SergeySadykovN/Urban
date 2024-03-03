@@ -30,11 +30,10 @@ class Cafe:
 
     def customer_arrival(self):
         '''моделирует приход посетителя(каждую секунду)'''
-        for custumer_num in range(10):
+        for custumer_num in range(1, 5):
             print(f'посетитель номер {custumer_num} прибыл')
             self.serve_customer(custumer_num)
             sleep(1)
-
 
     def serve_customer(self, customer_num):
         '''моделирует обслуживание посетителя
@@ -44,13 +43,15 @@ class Cafe:
         Время обслуживания 5 секунд.'''
         flag = False
         for table in self.tables:
-            if table.is_busy == False:
-                some_costumer = Customer(customer_num, self, table.id)
+            if not table.is_busy:
+                some_costumer = Customer(customer_num, self, table)
+                table.is_busy = True
                 some_costumer.start()
                 flag = True
                 break
-        if flag == False:
+        if not flag:
             self.queue.put(customer_num)
+            print(f'посетитель  {customer_num} ожидает свободный стол')
 
 
 class Customer(Thread):
@@ -70,11 +71,12 @@ class Customer(Thread):
         self.table.is_busy = False
         if self.cafe.queue.qsize() > 0:
             self.cafe.serve_customer(self.cafe.queue.get())
+        # self.table.is_busy = True
 
 
 tables = [Table(i) for i in range(1, 4)]
 queue = queue.Queue()
-# queue.qsize()
+queue.qsize()
 cafe = Cafe(queue, tables)
 
 customer_arrival_thread = Thread(target=cafe.customer_arrival)

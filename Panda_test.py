@@ -1,6 +1,7 @@
 import numpy
 import pandas as pd
 import statistics
+
 """Считать данные из файла с помощью библиотеки pandas, 
 выполнить простой анализ данных и вывести результаты."""
 

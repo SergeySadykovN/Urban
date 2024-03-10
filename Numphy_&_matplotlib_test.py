@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 '''Создать массив чисел с помощью библиотеки numpy, 
 выполнить математические операции с массивом и вывести результаты.'''
 
+
 # создадим массив размером 10x2, заполненный значениями от 0 до 9:
 list_numphy = numpy.array([[i for i in range(10) for j in range(2)]])
 for row in list_numphy:

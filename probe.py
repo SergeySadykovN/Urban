@@ -59,45 +59,67 @@
 #
 # squared_list = [square(number) for number in numbers_list]
 # print(list(squared_list))
-class InvalidDataException(Exception):
-    pass
+# class InvalidDataException(Exception):
+#     pass
+#
+#
+# class ProcessingException(Exception):
+#     pass
+#
+#
+# def generate_exc(arg):
+#     if arg < 0:
+#         raise InvalidDataException('arg is a negative value')
+#     elif arg == 0:
+#         raise ProcessingException('arg is a zero value')
+#     else:
+#         print('Sorry, but not generate exception today :(')
+#
+#
+# def process_data(arg):
+#     try:
+#         generate_exc(arg)
+#     except InvalidDataException as e:
+#         print(f'invalid data exception {e}')
+#         raise
+#     except ProcessingException as e:
+#         print(f'processing exception {e}')
+#         raise
+#
+#
+# try:
+#     process_data(-1)
+# except InvalidDataException:
+#     print('invalid data exception')
+#
+# try:
+#     process_data(0)
+# except ProcessingException:
+#     print('processing exeption')
+#
+# try:
+#     process_data(3)
+# except Exception:
+#     print('not handled')
+
+from datetime import time, datetime
 
 
-class ProcessingException(Exception):
-    pass
+# print(time.gmtime(0))
+month = datetime.now()
+find = month.month
+hour = int(time[:-2])
+print(hour)
 
 
-def generate_exc(arg):
-    if arg < 0:
-        raise InvalidDataException('arg is a negative value')
-    elif arg == 0:
-        raise ProcessingException('arg is a zero value')
-    else:
-        print('Sorry, but not generate exception today :(')
+seasons = {
+            'Winter': (11, 0, 1),
+            'Spring': (2, 3, 4),
+            'Summer': (5, 6, 7),
+            'Autumn': (8, 9, 10)
+        }
+for i, j in seasons.items():
+    if j.count(find):
+        print(i)
 
 
-def process_data(arg):
-    try:
-        generate_exc(arg)
-    except InvalidDataException as e:
-        print(f'invalid data exception {e}')
-        raise
-    except ProcessingException as e:
-        print(f'processing exception {e}')
-        raise
-
-
-try:
-    process_data(-1)
-except InvalidDataException:
-    print('invalid data exception')
-
-try:
-    process_data(0)
-except ProcessingException:
-    print('processing exeption')
-
-try:
-    process_data(3)
-except Exception:
-    print('not handled')
